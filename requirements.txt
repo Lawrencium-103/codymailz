@@ -2,6 +2,7 @@ fastapi
 uvicorn
 jinja2
 python-multipart
-langchain-google-genai
-langgraph
+langchain-openai
 langchain-core
+pydantic
+python-dotenv
