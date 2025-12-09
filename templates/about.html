@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-4xl mx-auto py-16 px-6">
+    
+    <!-- Hero Section -->
+    <div class="text-center mb-16" data-aos="fade-down">
+        <h1 class="text-4xl md:text-6xl font-serif text-white mb-4">Lawrence Oladeji</h1>
+        <p class="text-gold uppercase text-xs tracking-[0.3em] font-bold">AI Automation Engineer & Data Associate</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10">
+        
+        <!-- Left: Bio & Story -->
+        <div class="glass-panel p-8 rounded-xl border-l-4 border-gold" data-aos="fade-right">
+            <h2 class="text-2xl font-serif text-white mb-4">The Architect</h2>
+            <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+                <p>
+                    I am an <strong>AI Automation Engineer</strong> and <strong>Data Associate</strong> with over 4+ years of experience building intelligent systems.
+                </p>
+                <p>
+                    I built <strong>CodyMailz</strong> because I noticed a gap in the market: most people use generic templates that get ignored. I wanted to build an "Agentic Workflow" that automates the thinking process, not just the writing.
+                </p>
+                <p>
+                    My expertise lies in building AI Agents for internal process automation, turning raw data into actionable revenue.
+                </p>
+            </div>
+        </div>
+
+        <!-- Right: Tech Stack -->
+        <div class="space-y-6" data-aos="fade-left">
+            
+            <!-- Tech Stack Card -->
+            <div class="glass-panel p-6 rounded-xl">
+                <h3 class="text-white font-serif mb-4 border-b border-gray-800 pb-2">Technical Arsenal</h3>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                        <span class="text-cyan-500 block text-xs uppercase mb-1 font-bold">Data & Scripting</span>
+                        <ul class="text-gray-300 space-y-1">
+                            <li>• Python, R, Stata</li>
+                            <li>• Google AppScript</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-cyan-500 block text-xs uppercase mb-1 font-bold">Database</span>
+                        <ul class="text-gray-300 space-y-1">
+                            <li>• SQL (DBeaver)</li>
+                            <li>• MySQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-cyan-500 block text-xs uppercase mb-1 font-bold">Visualization</span>
+                        <ul class="text-gray-300 space-y-1">
+                            <li>• PowerBI</li>
+                            <li>• Tableau</li>
+                            <li>• Google Sheets (Advanced)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-cyan-500 block text-xs uppercase mb-1 font-bold">AI Models</span>
+                        <ul class="text-gray-300 space-y-1">
+                            <li>• Llama 3.3, GPT-4o</li>
+                            <li>• Agentic Workflows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="glass-panel p-6 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-gold/30">
+                <h3 class="text-white font-serif mb-4">Contact Me</h3>
+                <div class="space-y-3">
+                    <a href="mailto:oladeji.lawrencee@gmail.com" class="flex items-center text-gray-300 hover:text-gold transition">
+                        <span class="mr-3">📧</span> oladeji.lawrencee@gmail.com
+                    </a>
+                    <a href="https://wa.me/2349038819790" target="_blank" class="flex items-center text-gray-300 hover:text-green-400 transition">
+                        <span class="mr-3">📱</span> +234 903 881 9790 (WhatsApp)
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

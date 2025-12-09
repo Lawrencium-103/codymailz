@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodyMailz | Algorithmic Outreach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+                    colors: { gold: '#D4AF37', dark: '#050505' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #e0e0e0; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+    <!-- NAV BAR -->
+    <nav class="fixed w-full z-50 glass-panel border-b-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- BRANDING UPDATE HERE -->
+            <a href="/" class="text-2xl font-serif font-bold tracking-widest text-white">
+                CODYMAILZ<span class="text-gold">.AI</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-wider">
+                <a href="/" class="hover:text-gold transition">Home</a>
+                <a href="/course" class="hover:text-gold transition">Course</a>
+                <a href="/quiz" class="hover:text-gold transition">Certify</a>
+                <a href="/tool" class="hover:text-gold transition">AI Tool</a>
+                <a href="/about" class="hover:text-gold transition">About Us</a>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24 flex-grow px-4">
+        {% block content %}{% endblock %}
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+</body>
+</html>

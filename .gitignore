@@ -1,0 +1,19 @@
+# Security: Ignore environment variables
+.env
+.env.local
+
+# Python: Ignore compiled files and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# System: Ignore Mac/Windows folder settings
+.DS_Store
+Thumbs.db
+
+# IDE: Ignore VS Code / Pycharm settings
+.vscode/
+.idea/

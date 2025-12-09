@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-4xl mx-auto py-10">
+    <h1 class="text-4xl font-serif text-white mb-2 text-center">The Curriculum</h1>
+    <p class="text-center text-gray-500 mb-12 uppercase tracking-widest text-xs">From Mindset to Execution</p>
+
+    <div class="grid gap-4">
+        {% for module in modules %}
+        <a href="/course/{{ module.id }}" class="glass-panel p-8 rounded-lg hover:border-gold transition group flex justify-between items-center">
+            <div>
+                <span class="text-gold text-xs uppercase tracking-widest">Module 0{{ module.id }}</span>
+                <h3 class="text-2xl font-serif text-white mt-1 group-hover:text-gold transition">{{ module.title }}</h3>
+                <p class="text-gray-500 text-sm mt-2">{{ module.subtitle }}</p>
+            </div>
+            <span class="text-4xl text-gray-800 group-hover:text-gold transition">→</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

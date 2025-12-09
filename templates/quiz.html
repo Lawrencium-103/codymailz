@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="min-h-screen py-10 px-4">
+    
+    <!-- HEADER -->
+    <div class="text-center mb-8" data-aos="fade-down">
+        <h1 class="text-3xl md:text-5xl font-serif text-white">Codymailz<span class="text-gold">.Certification</span></h1>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mt-2">Final Examination</p>
+    </div>
+
+    <!-- CARDS CONTAINER -->
+    <div class="max-w-3xl mx-auto relative">
+        
+        <!-- STATE 1: INTRO (Start Screen) -->
+        <div id="intro-card" class="glass-panel p-10 rounded-2xl text-center border-t-4 border-gold">
+            <h2 class="text-2xl text-white font-serif mb-4">Are you ready to be certified?</h2>
+            <p class="text-gray-400 mb-8 leading-relaxed">
+                You will face <strong>15 randomized questions</strong> from our bank of 38 expert scenarios.
+                Your speed and accuracy will determine your final "Hunter Score".
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8 text-sm">
+                <div class="bg-gray-800 p-3 rounded border border-gray-700">
+                    <span class="text-gold block font-bold text-lg">15</span>
+                    <span class="text-gray-500 text-xs uppercase">Questions</span>
+                </div>
+                <div class="bg-gray-800 p-3 rounded border border-gray-700">
+                    <span class="text-gold block font-bold text-lg">45s</span>
+                    <span class="text-gray-500 text-xs uppercase">Avg Time</span>
+                </div>
+                <div class="bg-gray-800 p-3 rounded border border-gray-700">
+                    <span class="text-gold block font-bold text-lg">80%</span>
+                    <span class="text-gray-500 text-xs uppercase">Pass Mark</span>
+                </div>
+            </div>
+            <button onclick="startQuiz()" class="bg-gold text-black px-10 py-4 rounded font-bold uppercase tracking-widest hover:bg-white hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                Start Exam
+            </button>
+        </div>
+
+        <!-- STATE 2: THE QUIZ (Hidden by default) -->
+        <div id="quiz-card" class="hidden glass-panel p-8 rounded-2xl border border-gray-800 relative">
+            
+            <!-- Top Bar -->
+            <div class="flex justify-between items-center mb-6 border-b border-gray-800 pb-4">
+                <div class="text-xs uppercase tracking-widest text-gray-500">
+                    Question <span id="q-current" class="text-white">1</span> / <span id="q-total">15</span>
+                </div>
+                <div class="flex items-center gap-2 text-gold font-mono">
+                    <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                    <span id="timer">00:00</span>
+                </div>
+            </div>
+
+            <!-- Question Area -->
+            <h3 id="question-text" class="text-xl md:text-2xl text-white font-light mb-8 leading-relaxed min-h-[80px]">
+                Loading...
+            </h3>
+
+            <!-- Options -->
+            <div id="options-container" class="space-y-3">
+                <!-- Options injected via JS -->
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-800 h-1 mt-8 rounded-full overflow-hidden">
+                <div id="progress-bar" class="bg-gold h-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- STATE 3: RESULTS (Hidden by default) -->
+        <div id="result-card" class="hidden glass-panel p-10 rounded-2xl text-center border-t-4 border-cyan-500">
+            
+            <h2 class="text-2xl text-white font-serif mb-6">Assessment Complete</h2>
+
+            <!-- SEMI-CIRCLE GAUGE CONTAINER -->
+            <!-- 2:1 Aspect Ratio (Width 300px, Height 150px) -->
+            <div class="relative w-[300px] h-[150px] mx-auto mb-4 overflow-hidden">
+                
+                <!-- 1. The Gradient Arc (Full Circle masked) -->
+                <!-- We rotate it so the colors start at 270deg (Left) and sweep to 90deg (Right) -->
+                <div class="w-[300px] h-[300px] rounded-full"
+                     style="background: conic-gradient(from 270deg, #ef4444 0deg, #eab308 90deg, #22c55e 180deg, transparent 180deg);
+                            mask-image: radial-gradient(transparent 60%, black 61%);
+                            -webkit-mask-image: radial-gradient(transparent 60%, black 61%);">
+                </div>
+
+                <!-- 2. The Needle -->
+                <!-- Origin is bottom center of the half-circle container -->
+                <div id="gauge-needle" 
+                     class="absolute bottom-0 left-1/2 w-1 h-full bg-white origin-bottom transition-transform duration-1000 ease-out z-10"
+                     style="transform: rotate(-90deg);">
+                </div>
+
+                <!-- 3. Needle Base (Pivot Point) -->
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-white rounded-full z-20 shadow-lg"></div>
+
+            </div>
+
+            <!-- Score Text Display -->
+            <div class="mb-10 relative -top-4">
+                <span id="final-score" class="text-5xl font-bold text-white block">0%</span>
+                <span id="score-label" class="text-xs uppercase text-gray-500 tracking-widest">Hunter Score</span>
+            </div>
+
+            <!-- Metrics Grid -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="bg-black/40 p-4 rounded border border-gray-700">
+                    <span class="text-cyan-400 text-xs uppercase tracking-widest block mb-1">Time Taken</span>
+                    <span id="final-time" class="text-xl text-white font-mono">0m 0s</span>
+                </div>
+                <div class="bg-black/40 p-4 rounded border border-gray-700">
+                    <span class="text-gold text-xs uppercase tracking-widest block mb-1">Avg Speed</span>
+                    <span id="final-speed" class="text-xl text-white font-mono">0s / q</span>
+                </div>
+            </div>
+
+            <!-- Verdict Text -->
+            <p id="verdict-text" class="text-gray-300 mb-8 italic text-lg">Analyzing...</p>
+
+            <div class="flex flex-col gap-4">
+                <a href="/tool" class="bg-gold text-black px-8 py-3 rounded font-bold uppercase tracking-widest hover:bg-white transition">
+                    Use Codymailz Agent
+                </a>
+                <button onclick="location.reload()" class="text-gray-500 text-xs uppercase tracking-widest hover:text-white">
+                    Retake Exam
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- DATA INJECTION & LOGIC -->
+<script>
+    const questions = {{ questions | tojson }}; 
+    const totalQs = questions.length;
+    
+    let currentIdx = 0;
+    let score = 0;
+    let startTime;
+    let timerInterval;
+    
+    function startQuiz() {
+        document.getElementById('intro-card').classList.add('hidden');
+        document.getElementById('quiz-card').classList.remove('hidden');
+        startTime = new Date();
+        startTimer();
+        loadQuestion();
+    }
+
+    function startTimer() {
+        timerInterval = setInterval(() => {
+            const now = new Date();
+            const diff = Math.floor((now - startTime) / 1000);
+            const m = Math.floor(diff / 60).toString().padStart(2, '0');
+            const s = (diff % 60).toString().padStart(2, '0');
+            document.getElementById('timer').innerText = `${m}:${s}`;
+        }, 1000);
+    }
+
+    function loadQuestion() {
+        if (currentIdx >= totalQs) {
+            endQuiz();
+            return;
+        }
+
+        const q = questions[currentIdx];
+        
+        document.getElementById('q-current').innerText = currentIdx + 1;
+        document.getElementById('q-total').innerText = totalQs;
+        document.getElementById('question-text').innerText = q.q;
+        
+        const pct = ((currentIdx) / totalQs) * 100;
+        document.getElementById('progress-bar').style.width = `${pct}%`;
+
+        const container = document.getElementById('options-container');
+        container.innerHTML = ''; 
+
+        q.options.forEach((opt, idx) => {
+            const btn = document.createElement('button');
+            btn.className = "w-full text-left p-4 rounded border border-gray-700 bg-black/20 text-gray-300 hover:border-gold hover:text-white hover:bg-gray-800 transition duration-200 flex items-center group";
+            
+            btn.innerHTML = `
+                <span class="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center mr-4 text-xs group-hover:border-gold group-hover:text-gold text-gray-500 transition">${String.fromCharCode(65+idx)}</span>
+                <span>${opt}</span>
+            `;
+            
+            btn.onclick = () => handleAnswer(idx, q.answer);
+            container.appendChild(btn);
+        });
+    }
+
+    function handleAnswer(selected, correct) {
+        if (selected === correct) {
+            score++;
+        }
+        currentIdx++;
+        loadQuestion();
+    }
+
+    function endQuiz() {
+        clearInterval(timerInterval);
+        const endTime = new Date();
+        const durationSecs = Math.floor((endTime - startTime) / 1000);
+        
+        const finalPercentage = Math.round((score / totalQs) * 100);
+        const avgSpeed = Math.round(durationSecs / totalQs);
+        
+        // --- UI TRANSITION ---
+        document.getElementById('quiz-card').classList.add('hidden');
+        document.getElementById('result-card').classList.remove('hidden');
+
+        // Populate Numbers
+        document.getElementById('final-score').innerText = `${finalPercentage}%`;
+        document.getElementById('final-time').innerText = `${Math.floor(durationSecs/60)}m ${durationSecs%60}s`;
+        document.getElementById('final-speed').innerText = `${avgSpeed}s / q`;
+
+        // --- GAUGE ANIMATION LOGIC ---
+        // Semi-circle mapping:
+        // 0% Score = -90deg (Left/Red)
+        // 50% Score = 0deg (Up/Yellow)
+        // 100% Score = 90deg (Right/Green)
+        // Formula: (Score * 1.8) - 90
+        
+        const needleRotation = (finalPercentage * 1.8) - 90;
+        
+        // Small delay to let the UI render before animating
+        setTimeout(() => {
+            document.getElementById('gauge-needle').style.transform = `rotate(${needleRotation}deg)`;
+        }, 100);
+
+        // --- VERDICT LOGIC ---
+        const verdict = document.getElementById('verdict-text');
+        if (finalPercentage >= 80) {
+            verdict.innerText = "Exceptional. You are a Certified Hunter.";
+            verdict.className = "text-xl mb-8 italic text-green-400 font-serif";
+        } else if (finalPercentage >= 50) {
+            verdict.innerText = "Good, but you need to sharpen your skills.";
+            verdict.className = "text-xl mb-8 italic text-yellow-400 font-serif";
+        } else {
+            verdict.innerText = "Failed. Review the Mindset Module again.";
+            verdict.className = "text-xl mb-8 italic text-red-400 font-serif";
+        }
+    }
+</script>
+{% endblock %}

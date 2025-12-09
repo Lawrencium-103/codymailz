@@ -1,0 +1,34 @@
+import random # <--- Import this
+from fastapi import FastAPI, Request, Form, HTTPException
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from ai_engine import run_agent
+from course_data import COURSE_MODULES
+from quiz_data import QUIZ_BANK # <--- Import the questions
+import os
+
+app = FastAPI()
+
+if not os.path.exists("static"):
+    os.makedirs("static")
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
+
+# --- EXISTING ROUTES (Home, Course, Tool, About) ---
+# ... (Keep all your existing routes here: /, /course, /course/{id}, /tool, /generate, /about) ...
+
+# --- NEW QUIZ ROUTE ---
+@app.get("/quiz", response_class=HTMLResponse)
+async def read_quiz(request: Request):
+    # Randomly select 15 questions
+    # We use random.sample to ensure no duplicates
+    selected_questions = random.sample(QUIZ_BANK, 15)
+    
+    # We need to pass the total count for the frontend to know
+    return templates.TemplateResponse("quiz.html", {
+        "request": request,
+        "questions": selected_questions,
+        "total_questions": 15
+    })
