@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- UPDATED TITLE HERE -->
     <title>CodyMailz | Cold Email Made Easier</title>
     
-    <!-- Microsoft Clarity Tracking Code -->
+    <!-- Microsoft Clarity Tracking -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -16,13 +14,8 @@
         })(window, document, "clarity", "script", "ujd81etlop");
     </script>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script>
@@ -38,9 +31,13 @@
     <style>
         body { background-color: #050505; color: #e0e0e0; }
         .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        /* Floating Share Animation */
+        .share-node:hover .share-options { opacity: 1; transform: translateY(0); pointer-events: auto; }
     </style>
 </head>
-<body class="antialiased min-h-screen flex flex-col">
+<body class="antialiased min-h-screen flex flex-col relative">
+    
     <!-- NAV BAR -->
     <nav class="fixed w-full z-50 glass-panel border-b-0">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -57,10 +54,50 @@
             </div>
         </div>
     </nav>
+
     <main class="pt-24 flex-grow px-4">
         {% block content %}{% endblock %}
     </main>
     
+    <!-- FLOATING SHARE NODE -->
+    <div class="fixed bottom-8 right-8 z-50 share-node group">
+        
+        <!-- Social Options (Hidden by default, slides up on hover) -->
+        <div class="share-options absolute bottom-full right-0 mb-4 flex flex-col gap-3 opacity-0 transform translate-y-4 transition-all duration-300 pointer-events-none">
+            
+            <!-- WhatsApp -->
+            <a href="https://api.whatsapp.com/send?text=Check%20out%20CodyMailz%20-%20The%20AI%20Cold%20Email%20Architect%3A%20https%3A%2F%2Fcodymailz.onrender.com" target="_blank" 
+               class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition" title="Share on WhatsApp">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcodymailz.onrender.com" target="_blank" 
+               class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition" title="Share on LinkedIn">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://twitter.com/intent/tweet?text=Just%20found%20this%20insane%20AI%20tool%20for%20Cold%20Emailing.%20It%20actually%20does%20research%20for%20you.%20%F0%9F%A4%AF&url=https%3A%2F%2Fcodymailz.onrender.com" target="_blank" 
+               class="bg-black border border-gray-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:border-gold hover:text-gold transition" title="Share on X">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+
+            <!-- Copy Link -->
+            <button onclick="navigator.clipboard.writeText('https://codymailz.onrender.com').then(()=>alert('Link Copied!'))" 
+                    class="bg-gray-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gold hover:text-black transition" title="Copy Link">
+                🔗
+            </button>
+        </div>
+
+        <!-- Main Trigger Button -->
+        <button class="bg-gold text-black w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.5)] hover:scale-110 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+            </svg>
+        </button>
+    </div>
+
     <!-- Animation Init -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> AOS.init(); </script>
