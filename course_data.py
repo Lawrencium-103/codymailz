@@ -1,223 +1,365 @@
 COURSE_MODULES = [
     {
         "id": 1,
-        "title": "The Engineer's Mindset",
-        "subtitle": "Why 99% of Freelancers Fail (And How to Fix It)",
+        "title": "The Engineer's Mindset | A Deep Dive",
+        "subtitle": "Engineering Your Inbox: The System for Predictable Revenue",
         "content": """
-            <h3 class="text-2xl text-white font-serif mb-4">The "Begging" Trap</h3>
-            <p class="mb-6">
-                Most freelancers operate from a position of weakness. They approach clients with what I call the <strong>"Begging Bowl" strategy</strong>. They scour job boards (Upwork, Fiverr), fighting against 50 other people for the lowest price, essentially saying: <em>"Please, sir, can I have some work?"</em>
-            </p>
-            <p class="mb-6">
-                <strong>The Truth:</strong> High-value clients do not look at job boards. They are too busy running their businesses. If you want to make $10k/month, you must stop <em>applying</em> and start <em>hunting</em>.
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                Forget everything you think you know about "finding clients." This module isn't about writing emails; it's about installing a new operating system for your freelance business. We're replacing desperation with design, luck with logic, and pitches with proven systems.
             </p>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">The "Selfish" Offer Principle</h3>
-            <p class="mb-6">
-                It sounds counter-intuitive, but to get what <em>you</em> want (money), you must be aggressively selfish about solving <em>their</em> problem.
-            </p>
-            <div class="bg-gray-900/50 p-6 border-l-4 border-red-500 mb-6 rounded-r-lg">
-                <strong class="text-red-400 block mb-2 uppercase tracking-widest text-xs">The Amateur Pitch</strong>
-                "Hi, I am a graphic designer with 5 years of experience. I am looking for new clients. Here is my portfolio. Can we chat?"
-                <br><br>
-                <em>Why it fails: It's all about YOU. The client doesn't care about your 5 years. They care about their deadline.</em>
-            </div>
-            <div class="bg-gray-900/50 p-6 border-l-4 border-gold mb-6 rounded-r-lg">
-                <strong class="text-gold block mb-2 uppercase tracking-widest text-xs">The Engineer's Pitch</strong>
-                "I saw you just launched the new Podcast series. Most creators struggle to turn those 1-hour episodes into short clips for TikTok. I've already drafted 3 scripts for your latest episode to save you time. Want to see them?"
-                <br><br>
-                <em>Why it works: It identifies a specific pain, offers value upfront, and requires zero mental effort from them.</em>
+            <!-- PART 1 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 1: Diagnosing the System Failure</h3>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-red-900/10 border border-red-500/30 p-6 rounded-lg">
+                    <strong class="text-red-400 uppercase tracking-widest text-xs block mb-2">The Scarcity Loop</strong>
+                    <p class="text-gray-400 text-sm">See empty calendar → Panic → Apply to job boards → Compete on price → Get rejected → Repeat.</p>
+                </div>
+                <div class="bg-green-900/10 border border-green-500/30 p-6 rounded-lg">
+                    <strong class="text-green-400 uppercase tracking-widest text-xs block mb-2">The Authority Loop</strong>
+                    <p class="text-gray-400 text-sm">Identify target → Diagnose pain → Craft specific solution → Present as authority → Get paid for insight.</p>
+                </div>
             </div>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">The "Freedom Number" (The Math)</h3>
-            <p class="mb-6">
-                Stop relying on luck. Sales is simply a math equation with variables you can control. Let's engineer your $3,000/month goal.
+            <div class="bg-gold/5 border-l-4 border-gold p-6 my-8">
+                <strong class="text-gold font-serif text-lg block mb-2">Actionable Audit</strong>
+                <p class="text-gray-300 italic">"Take 5 minutes: List your last 5 client interactions. For each, ask: 'Was I in the Scarcity Loop (begging) or the Authority Loop (leading)?' The pattern will be revealing."</p>
+            </div>
+
+            <!-- PART 2 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 2: The Two Core Algorithms</h3>
+            
+            <h4 class="text-gold text-lg font-bold mb-2">Algorithm 1: Eliminating the "Begging" Variable</h4>
+            <p class="mb-4 text-gray-300">
+                Job boards are signal-scarce environments. High-value clients operate in signal-rich environments (Inboxes, Communities).
+                We use the <strong>"Client Journey" Map</strong>: Don't find where clients <em>post jobs</em>. Find where they <em>consume content</em> to solve problems.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div class="bg-gray-800 p-4 rounded border border-gray-700">
-                    <span class="text-gold text-xs uppercase tracking-widest">Target Income</span>
-                    <p class="text-2xl font-bold text-white">$3,000</p>
+
+            <h4 class="text-gold text-lg font-bold mb-2 mt-8">Algorithm 2: The "Selfish" Offer Engine</h4>
+            <p class="mb-4 text-gray-300">The "Selfish" part means you pre-select a problem you are uniquely gifted to solve.</p>
+
+            <div class="space-y-4 mb-8">
+                <div class="bg-gray-900 p-4 rounded border border-gray-700 opacity-60">
+                    <strong class="text-gray-500 text-xs uppercase">The Amateur Pitch (Virus)</strong>
+                    <p class="text-gray-400 font-mono text-sm mt-1">"I am, I have, I can, I want..." (Returns an Error in client's mind).</p>
                 </div>
-                <div class="bg-gray-800 p-4 rounded border border-gray-700">
-                    <span class="text-gold text-xs uppercase tracking-widest">Avg Service Price</span>
-                    <p class="text-2xl font-bold text-white">$500</p>
-                </div>
-                <div class="bg-gray-800 p-4 rounded border border-gray-700">
-                    <span class="text-gold text-xs uppercase tracking-widest">Clients Needed</span>
-                    <p class="text-2xl font-bold text-white">6 Clients</p>
-                </div>
-                <div class="bg-gray-800 p-4 rounded border border-gray-700">
-                    <span class="text-gold text-xs uppercase tracking-widest">Email Volume Req</span>
-                    <p class="text-2xl font-bold text-white">600 Emails</p>
+                <div class="bg-gray-800 p-4 rounded border border-gold shadow-lg shadow-gold/10">
+                    <strong class="text-gold text-xs uppercase">The Engineer's Pitch (Protocol)</strong>
+                    <p class="text-white font-mono text-sm mt-2 leading-relaxed">
+                        <span class="text-purple-400">If</span> [Trigger Event] <span class="text-purple-400">then</span> [Pain Point].<br>
+                        I have built [Solution Artifact] to resolve [Outcome].<br>
+                        <span class="text-green-400">Input:</span> Your interest? <span class="text-green-400">Output:</span> Preview.
+                    </p>
                 </div>
             </div>
-            <p class="text-sm text-gray-400">
-                <em>*Assuming a conservative 1% close rate. If you improve your skill (using this course), you can drop that volume to 200 emails.</em>
+
+            <!-- PART 3 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 3: Engineering Your "Freedom Number"</h3>
+            
+            <p class="mb-6 text-gray-300">This is where we move from philosophy to physics. Your income is a mathematical certainty.</p>
+
+            <div class="bg-black p-6 rounded-lg border border-gray-700 font-mono text-sm text-green-400 mb-8">
+                Target Income: $3,000<br>
+                ÷ Avg Project: $500<br>
+                = Clients Needed: 6<br>
+                ÷ Closing Rate: 1%<br>
+                = Leads Needed: 600<br>
+                ÷ Response Rate: 20%<br>
+                <span class="text-white border-b border-white">= REQUIRED EMAILS: 120</span>
+            </div>
+
+            <p class="mb-6 text-gray-300">
+                You control the <strong>Emails Sent</strong> variable. By improving your targeting (Signal) and Pitch (Protocol), you can 10X your efficiency.
             </p>
         """
     },
     {
         "id": 2,
-        "title": "Precision Prospecting",
-        "subtitle": "How to Find Clients Who Actually Have Money",
+        "title": "Precision Prospecting | A Deep Dive",
+        "subtitle": "The H.E.A.T. System: Finding Clients Primed to Buy",
         "content": """
-            <h3 class="text-2xl text-white font-serif mb-4">The "Broke Client" Trap</h3>
-            <p class="mb-6">
-                You can write the best email in history, but if you send it to a business that has no money, you will fail. Prospecting is 80% of the battle.
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                Prospecting isn't about finding <em>any</em> client; it's about surgically identifying the clients who are <em>already in motion</em>. This is the art of finding "H.E.A.T."—clients who are <strong>Hot, Engaged, Able, and Targetable</strong>.
             </p>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">The SLAM Method</h3>
-            <p class="mb-6">Before you add anyone to your list, run them through the <strong>SLAM</strong> filter.</p>
-            
-            <ul class="space-y-6">
-                <li class="bg-black/40 p-6 rounded border border-gray-700">
-                    <strong class="text-gold text-lg">S - Specific Need</strong>
-                    <p class="text-gray-400 mt-2">Do they have a visible problem? (e.g., A broken website link, an inactive Instagram page, a new job posting for a role you can fill).</p>
-                </li>
-                <li class="bg-black/40 p-6 rounded border border-gray-700">
-                    <strong class="text-gold text-lg">L - Location (Digital)</strong>
-                    <p class="text-gray-400 mt-2">Are they active online? If they haven't posted on LinkedIn in 6 months, they won't reply to your email.</p>
-                </li>
-                <li class="bg-black/40 p-6 rounded border border-gray-700">
-                    <strong class="text-gold text-lg">A - Attribute (Money)</strong>
-                    <p class="text-gray-400 mt-2">Do they have the "Money Attribute"? Look for: Running Facebook Ads (spending money), hiring new staff (growing), or recently funded (Crunchbase).</p>
-                </li>
-                <li class="bg-black/40 p-6 rounded border border-gray-700">
-                    <strong class="text-gold text-lg">M - Method</strong>
-                    <p class="text-gray-400 mt-2">Can you find a direct email? Never email <em>info@company.com</em>. Use tools like Apollo.io or Hunter.io to find the CEO or Founder.</p>
-                </li>
-            </ul>
+            <!-- PART 1 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 1: The "Broke Client" Trap</h3>
+            <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 mb-8">
+                <strong class="text-gold text-sm uppercase tracking-widest block mb-2">The Leaky Funnel Analogy</strong>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Imagine pouring 100 prospects into a funnel. If 70 have no budget, you are desperately trying to close the remaining 30. Precision Prospecting seals those leaks <em>before</em> you send a single email.
+                </p>
+            </div>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">Trigger Events</h3>
-            <p class="mb-6">The best time to reach out is immediately after a "Trigger Event."</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-4 border border-gold/20 rounded bg-gold/5">
-                    <strong>New CMO Hired</strong>
-                    <p class="text-xs text-gray-400 mt-2">They will want to make changes and hire new vendors.</p>
+            <!-- PART 2 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 2: The SLAM Filter Protocol</h3>
+            <p class="mb-6 text-gray-300">The SLAM Method is a <strong>gating system</strong>. One "No" is a disqualification.</p>
+
+            <div class="grid md:grid-cols-2 gap-4 mb-8">
+                <div class="bg-black/40 p-6 rounded border border-gray-700 hover:border-gold transition duration-300">
+                    <strong class="text-gold text-2xl font-serif block mb-2">S</strong>
+                    <span class="text-white text-xs uppercase tracking-widest block mb-3">Specific Need</span>
+                    <p class="text-gray-400 text-sm">Don't assume pain; <em>observe</em> it.</p>
                 </div>
-                <div class="p-4 border border-gold/20 rounded bg-gold/5">
-                    <strong>Website Rebrand</strong>
-                    <p class="text-xs text-gray-400 mt-2">They need new copy, SEO, and social assets.</p>
+                <div class="bg-black/40 p-6 rounded border border-gray-700 hover:border-gold transition duration-300">
+                    <strong class="text-gold text-2xl font-serif block mb-2">L</strong>
+                    <span class="text-white text-xs uppercase tracking-widest block mb-3">Location (Digital)</span>
+                    <p class="text-gray-400 text-sm">Audit: LinkedIn posts? Active Twitter?</p>
                 </div>
-                <div class="p-4 border border-gold/20 rounded bg-gold/5">
-                    <strong>Bad Review</strong>
-                    <p class="text-xs text-gray-400 mt-2">They are feeling pain about their reputation.</p>
+                <div class="bg-black/40 p-6 rounded border border-gray-700 hover:border-gold transition duration-300">
+                    <strong class="text-gold text-2xl font-serif block mb-2">A</strong>
+                    <span class="text-white text-xs uppercase tracking-widest block mb-3">Attribute (Money)</span>
+                    <p class="text-gray-400 text-sm">Running Paid Ads? Recently Funded?</p>
+                </div>
+                <div class="bg-black/40 p-6 rounded border border-gray-700 hover:border-gold transition duration-300">
+                    <strong class="text-gold text-2xl font-serif block mb-2">M</strong>
+                    <span class="text-white text-xs uppercase tracking-widest block mb-3">Method (Access)</span>
+                    <p class="text-gray-400 text-sm">Use Apollo/Hunter.io. Find direct lines.</p>
+                </div>
+            </div>
+
+            <!-- PART 3 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 3: Trigger Events</h3>
+            <div class="space-y-4 mb-8">
+                <div class="flex flex-col md:flex-row gap-4 bg-gray-900/40 p-4 rounded border border-gray-700">
+                    <div class="md:w-1/3"><strong class="text-green-400 text-sm uppercase">Growth Triggers</strong></div>
+                    <div class="md:w-2/3 text-sm text-gray-300">Funding, New Office, New Exec Hire.</div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-4 bg-gray-900/40 p-4 rounded border border-gray-700">
+                    <div class="md:w-1/3"><strong class="text-red-400 text-sm uppercase">Problem Triggers</strong></div>
+                    <div class="md:w-2/3 text-sm text-gray-300">Bad Review, Failed Launch, Key Departure.</div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-4 bg-gray-900/40 p-4 rounded border border-gray-700">
+                    <div class="md:w-1/3"><strong class="text-gold text-sm uppercase">Change Triggers</strong></div>
+                    <div class="md:w-2/3 text-sm text-gray-300">Rebrand, Replatforming, Speaking at Event.</div>
                 </div>
             </div>
         """
     },
     {
         "id": 3,
-        "title": "High-Conversion Syntax",
-        "subtitle": "The Copywriting Architecture that Gets Replies",
+        "title": "High-Conversion Syntax | A Deep Dive",
+        "subtitle": "The Architecture of Attention: Engineering Emails That Demand a Response",
         "content": """
-            <h3 class="text-2xl text-white font-serif mb-4">The "Anti-Template" Rule</h3>
-            <p class="mb-6">
-                Templates are dead. People can smell a copy-pasted email from a mile away. Instead of templates, we use <strong>Frameworks</strong> (or Blocks).
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                You have the perfect prospect—qualified and in motion. Now, the final engineering challenge: designing the message. We're not writing emails; we're building a guided pathway for a busy person's brain, leading them to one inevitable conclusion: <strong>"I should reply."</strong>
             </p>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">Block 1: The "Un-ignorable" Hook</h3>
-            <p class="mb-4">Your first sentence determines if the email gets read. It must prove you are not a robot.</p>
-            <p class="text-gray-400 mb-2">❌ <strong>Bad:</strong> "I hope this email finds you well." (Wasted space)</p>
-            <p class="text-green-400 mb-6">✅ <strong>Good:</strong> "I was listening to your interview on the [Podcast Name] and loved your point about [Specific Topic]."</p>
+            <!-- PART 1 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 1: The Rise of the Framework</h3>
+            <p class="text-gray-300 mb-8 italic border-l-2 border-gold pl-4">
+                <strong>Why "I hope this email finds you well" fails:</strong> It's a neutral signal. In high noise, neutral = negative. You must send a positive signal immediately.
+            </p>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">Block 2: The Bridge (The Pain)</h3>
-            <p class="mb-6">You must connect that compliment to a business problem immediately.</p>
-            <p class="italic text-gray-400 pl-4 border-l-2 border-gold mb-6">"It got me thinking—you have great audio content, but I noticed you aren't repurposing it into Clips for LinkedIn. You are leaving 10k+ views on the table."</p>
-
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">Block 3: The "Selfish" Offer</h3>
-            <p class="mb-6">State clearly what you do, but frame it as a benefit to them.</p>
-            <p class="italic text-gray-400 pl-4 border-l-2 border-gold mb-6">"I specialize in editing short-form clips. I'd love to edit 3 videos for you for free. I just need a case study for my portfolio, and you get free content to keep forever."</p>
-
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">Block 4: The Low-Friction CTA</h3>
-            <p class="mb-6">The goal of the first email is NOT to get a sale. It is to get a <strong>Reply</strong>.</p>
-            <div class="bg-black p-6 rounded border border-gray-700">
-                <p class="text-white font-bold mb-2">The "No-Oriented" Question</p>
-                <p class="text-gray-400 mb-4">Psychologically, people feel safer saying "No" than "Yes." Use this to your advantage.</p>
-                <p class="text-gold">"Is this something you'd be opposed to chatting about?"</p>
-                <p class="text-gold mt-2">"Is 4pm Sunday a bad time for a 3-minute chat?"</p>
+            <!-- PART 2 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 2: The R.E.P.L.Y. Framework</h3>
+            
+            <div class="space-y-6">
+                <div class="mb-4 pl-6 border-l-4 border-gold">
+                    <strong class="text-gold font-serif text-xl block">1. The Recognition Hook</strong>
+                    <p class="text-gray-300 text-sm">"I saw your insightful comment on [Influencer]'s post about [Topic]..."</p>
+                </div>
+                <div class="mb-4 pl-6 border-l-4 border-gold">
+                    <strong class="text-gold font-serif text-xl block">2. The Empathy Bridge</strong>
+                    <p class="text-gray-300 text-sm">"...which made me think. The tricky part after a big launch is often sustaining that momentum..."</p>
+                </div>
+                <div class="mb-4 pl-6 border-l-4 border-gold">
+                    <strong class="text-gold font-serif text-xl block">3. The Proposal (Reframed)</strong>
+                    <p class="text-gray-300 text-sm">"I help [Client Type] do [Outcome]. For example, I've already sketched out how that article could become a LinkedIn carousel."</p>
+                </div>
+                <div class="mb-4 pl-6 border-l-4 border-gold">
+                    <strong class="text-gold font-serif text-xl block">4. The Low-Lift Link (CTA)</strong>
+                    <p class="text-gray-300 text-sm">"Is this completely irrelevant to your priorities right now?" (The No-Oriented Question)</p>
+                </div>
+                <div class="mb-4 pl-6 border-l-4 border-gold">
+                    <strong class="text-gold font-serif text-xl block">5. The Yield</strong>
+                    <p class="text-gray-300 text-sm">"Either way, keep up the great work on [Project]. Best, [Name]"</p>
+                </div>
             </div>
         """
     },
     {
         "id": 4,
-        "title": "Scaling & Automation",
-        "subtitle": "How to Send 100 Emails a Day Without Going Crazy",
+        "title": "Scaling & Automation | A Deep Dive",
+        "subtitle": "Systematized Outreach: Building a Client-Acquisition Machine",
         "content": """
-            <h3 class="text-2xl text-white font-serif mb-4">Manual vs. Automated</h3>
-            <p class="mb-6">
-                When you start, send 10 emails a day manually. Do the research yourself. Once you get your first client, you need to scale. This is where <strong>AI Agents</strong> come in.
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                You've mastered the manual craft. Now, we engineer leverage. This module is about moving from artisan to architect, building a machine that generates predictable conversations while you focus on closing them. The goal is not to become impersonal, but to become impossibly efficient.
             </p>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">The AI Research Workflow</h3>
-            <p class="mb-6">Don't use AI to write the whole email blindly. Use it to do the heavy lifting of research.</p>
-            <div class="bg-gray-800 p-6 rounded border border-gray-600 mb-6">
-                <strong class="text-gold text-xs uppercase tracking-widest">The Prompt Engineer's Secret</strong>
-                <p class="text-gray-300 mt-2 font-mono text-sm">
-                    "I sell [Service]. Here is the LinkedIn profile of my prospect: [Paste Profile]. <br><br>
-                    Extract 3 key facts about them and write a 1-sentence 'Hook' that connects those facts to my service."
-                </p>
+            <!-- PART 1 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 1: The Leverage Ladder</h3>
+            <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-4 bg-gray-900/50 p-4 rounded border border-gray-700">
+                    <span class="text-3xl text-gray-600 font-bold">01</span>
+                    <div>
+                        <strong class="text-white block">Manual Mastery (Weeks 1-2)</strong>
+                        <p class="text-gray-400 text-sm">10-20 emails/day. Non-negotiable. Builds intuition and data.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 bg-gray-900/50 p-4 rounded border border-gold">
+                    <span class="text-3xl text-gold font-bold">02</span>
+                    <div>
+                        <strong class="text-gold block">Assisted Execution (Week 3+)</strong>
+                        <p class="text-gray-300 text-sm">Delegate research to AI. You remain the Editor-in-Chief.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 bg-gray-900/50 p-4 rounded border border-gray-700">
+                    <span class="text-3xl text-gray-600 font-bold">03</span>
+                    <div>
+                        <strong class="text-white block">Systemized Growth (Month 2+)</strong>
+                        <p class="text-gray-400 text-sm">Batched cycles. You manage the system, not the tasks.</p>
+                    </div>
+                </div>
             </div>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">Technical Deliverability (Don't Skip This)</h3>
-            <p class="mb-6">If you send 100 emails and nobody opens them, you are likely in the Spam Folder. You must set up your domain correctly.</p>
-            <ul class="list-disc ml-6 space-y-2 text-gray-400">
-                <li><strong>Warming Up:</strong> Never send 50 emails on Day 1 of a new domain. Start with 5, then 10, then 15.</li>
-                <li><strong>Plain Text:</strong> Avoid HTML templates, images, or links in your first email. They trigger spam filters.</li>
-                <li><strong>DKIM/SPF:</strong> These are technical signatures. Ask your domain provider (GoDaddy/Namecheap) to help you enable them.</li>
-            </ul>
+            <!-- PART 2 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 2: The AI Research Workflow</h3>
+            <div class="bg-black p-6 rounded border border-gray-700 mb-6">
+                <strong class="text-gold text-xs uppercase tracking-widest block mb-4">The "Prompt Director" Command</strong>
+                <div class="font-mono text-sm text-green-400 space-y-2">
+                    <p>"Act as a cold email research assistant. I am a [Your Service]. Here is my prospect's profile: [Paste Text]."</p>
+                    <p><strong>Your Task:</strong></p>
+                    <p>1. <strong>Extract:</strong> 3 relevant facts (job change, post topic, skill).</p>
+                    <p>2. <strong>Analyze:</strong> Why is this a connector to my service?</p>
+                    <p>3. <strong>Generate:</strong> Two 1-sentence 'Recognition Hooks' that lead into a conversation."</p>
+                </div>
+            </div>
+
+            <!-- PART 3 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 3: The Hourglass Workflow</h3>
+            <div class="space-y-1">
+                <div class="bg-cyan-900/30 p-6 rounded-t-xl border border-cyan-500/30 text-center">
+                    <strong class="text-cyan-400 uppercase text-xs tracking-[0.2em] block mb-2">Monday (2 Hours)</strong>
+                    <h4 class="text-xl text-white font-serif">Batch Creation</h4>
+                    <p class="text-gray-400 text-sm mt-2">Source 50 leads → Run AI Research → Assemble 25 R.E.P.L.Y. Drafts.</p>
+                </div>
+                <div class="bg-gold/10 p-6 border-x border-gold/30 text-center mx-8">
+                    <strong class="text-gold uppercase text-xs tracking-[0.2em] block mb-2">Tue - Thu (15 Mins)</strong>
+                    <h4 class="text-xl text-white font-serif">Drip Execution</h4>
+                    <p class="text-gray-400 text-sm mt-2">Load into scheduler. Auto-send at 10:15 AM. Set 2 auto-followups.</p>
+                </div>
+                <div class="bg-green-900/30 p-6 rounded-b-xl border border-green-500/30 text-center">
+                    <strong class="text-green-400 uppercase text-xs tracking-[0.2em] block mb-2">Friday (2 Hours)</strong>
+                    <h4 class="text-xl text-white font-serif">Conversion & Review</h4>
+                    <p class="text-gray-400 text-sm mt-2">Analyze replies. Iterate hooks. Plan next week's list.</p>
+                </div>
+            </div>
         """
     },
     {
         "id": 5,
-        "title": "Optimization & The Pivot",
-        "subtitle": "What to Do When It Doesn't Work",
+        "title": "Optimization & The Pivot | A Deep Dive",
+        "subtitle": "The System Debugger: From Data to Dominance",
         "content": """
-            <h3 class="text-2xl text-white font-serif mb-4">The Scientific Method</h3>
-            <p class="mb-6">
-                If you don't get replies, do not give up. Analyze the data. The data tells you exactly what is broken.
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                You have built your machine. Now, we master the final skill: becoming its mechanic. Here, you will learn to read the data, debug the bottlenecks, and make the critical strategic decision: to optimize or to pivot. This is what separates a practitioner from a true professional.
             </p>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">Diagnosing Your Funnel</h3>
-            <table class="w-full text-left border-collapse mb-8">
-                <thead>
-                    <tr class="border-b border-gray-700 text-gold text-xs uppercase">
-                        <th class="py-2">Symptom</th>
-                        <th class="py-2">Diagnosis</th>
-                        <th class="py-2">The Fix</th>
-                    </tr>
-                </thead>
-                <tbody class="text-gray-400 text-sm">
-                    <tr class="border-b border-gray-800">
-                        <td class="py-4">Low Open Rate (< 30%)</td>
-                        <td class="py-4">Bad Subject Line</td>
-                        <td class="py-4">Test simpler subjects (e.g., "question").</td>
-                    </tr>
-                    <tr class="border-b border-gray-800">
-                        <td class="py-4">High Open, No Reply</td>
-                        <td class="py-4">Bad Offer / Copy</td>
-                        <td class="py-4">Shorten the email. Make the offer more "Selfish."</td>
-                    </tr>
-                    <tr class="border-b border-gray-800">
-                        <td class="py-4">"Not Interested"</td>
-                        <td class="py-4">Bad Targeting</td>
-                        <td class="py-4">Your list is wrong. Stop pitching broke people.</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- PART 1 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 1: The Scientific Method</h3>
+            <p class="text-gold italic font-serif text-lg mb-6">"I am not failing; I am generating data points."</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-gray-800 p-4 rounded text-center border border-gray-700">
+                    <strong class="text-white block text-sm">Open Rate</strong>
+                    <span class="text-green-400 font-bold">> 40%</span>
+                </div>
+                <div class="bg-gray-800 p-4 rounded text-center border border-gray-700">
+                    <strong class="text-white block text-sm">Reply Rate</strong>
+                    <span class="text-green-400 font-bold">> 10%</span>
+                </div>
+                <div class="bg-gray-800 p-4 rounded text-center border border-gray-700">
+                    <strong class="text-white block text-sm">Call Rate</strong>
+                    <span class="text-green-400 font-bold">> 60%</span>
+                </div>
+                <div class="bg-gray-800 p-4 rounded text-center border border-gray-700">
+                    <strong class="text-white block text-sm">Close Rate</strong>
+                    <span class="text-green-400 font-bold">> 40%</span>
+                </div>
+            </div>
 
-            <h3 class="text-2xl text-white font-serif mb-4 mt-12">The Pivot Rule: "Don't Be a Tree"</h3>
-            <p class="mb-6">
-                If you have sent 500 emails to Real Estate Agents and got zero clients, <strong>STOP</strong>.
-            </p>
-            <p class="mb-6">
-                Do not change your service. Change your <strong>Niche</strong>.
-            </p>
-            <div class="p-6 bg-gold/10 border border-gold rounded text-center">
-                <p class="text-white text-lg font-bold mb-2">Final Assignment</p>
-                <p class="text-gray-400 mb-4">You now have the Mindset, the Method, and the Machine.</p>
-                <p class="text-gray-300">Go to the <strong>AI Tool</strong> tab. Generate 2 variations for a prospect you found today. Send it. <br>Welcome to the hunt.</p>
-                <a href="/tool" class="inline-block mt-4 bg-gold text-black px-6 py-2 rounded font-bold uppercase tracking-widest hover:bg-white transition">Launch AI Agent</a>
+            <!-- PART 2 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 2: The Diagnostic Matrix</h3>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse border border-gray-700 mb-8">
+                    <thead>
+                        <tr class="bg-gray-900 border-b border-gray-700">
+                            <th class="py-3 px-4 text-gold text-xs uppercase tracking-widest">Symptom</th>
+                            <th class="py-3 px-4 text-gold text-xs uppercase tracking-widest">Root Cause</th>
+                            <th class="py-3 px-4 text-gold text-xs uppercase tracking-widest">The Engineer's Fix</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300 text-sm">
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-4 font-bold text-red-400">Low Open Rate (< 30%)</td>
+                            <td class="py-4 px-4">Spam Folder or Weak Subject.</td>
+                            <td class="py-4 px-4">Run Deliverability Audit. A/B Test "Curiosity" vs "Benefit" subjects.</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-4 font-bold text-red-400">High Open, Low Reply</td>
+                            <td class="py-4 px-4">Weak Offer or Irrelevant Hook.</td>
+                            <td class="py-4 px-4">The "5-Second Test." Sharpen the Selfish Offer. Cut length.</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-4 font-bold text-red-400">"Not Interested"</td>
+                            <td class="py-4 px-4">Bad Targeting (No Money/Pain).</td>
+                            <td class="py-4 px-4">Re-apply SLAM Filter. Verify "Money Attribute" before sending.</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-4 font-bold text-red-400">Calls, No Closes</td>
+                            <td class="py-4 px-4">Bad Discovery or Pricing.</td>
+                            <td class="py-4 px-4">Use "Before/After" framework on calls. Tier your offer.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PART 3 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 3: The Strategic Pivot</h3>
+            <p class="mb-4 text-gray-300">"Don't be a Tree." Trees stay in one spot. Businesses must move.</p>
+            
+            <div class="bg-gray-900/50 p-6 rounded border-l-4 border-gold mb-8">
+                <strong class="text-gold font-serif text-lg block mb-2">The Pivot Decision Matrix</strong>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300 text-sm">
+                    <li><strong>Execution Problem:</strong> Low stats? Fix the machine (Part 2).</li>
+                    <li><strong>Strategic Problem:</strong> Good conversations but zero buys? <strong>PIVOT.</strong></li>
+                    <li><strong>How to Pivot:</strong> Move sideways. Target <em>Real Estate Agents</em>? Try <em>Mortgage Brokers</em>. Same service, different pain.</li>
+                </ul>
+            </div>
+
+            <!-- PART 4 -->
+            <h3 class="text-2xl text-white font-serif mb-4 mt-12 border-b border-gray-800 pb-2">Part 4: The Launchpad</h3>
+            
+            <div class="bg-cyan-900/20 p-6 rounded border border-cyan-500/30 mb-8">
+                <strong class="text-cyan-400 font-serif text-xl block mb-4">Final Assignment: The System in Miniature</strong>
+                <ol class="list-decimal ml-5 space-y-3 text-gray-300 text-sm">
+                    <li><strong>Find:</strong> Identify 1 prospect using SLAM + Trigger.</li>
+                    <li><strong>Diagnose:</strong> Use the AI Agent (below) to find the Hook.</li>
+                    <li><strong>Send:</strong> Send the email using R.E.P.L.Y. Log it.</li>
+                </ol>
+            </div>
+
+            <div class="bg-black p-6 rounded border border-gray-700 mb-8">
+                <strong class="text-gold text-xs uppercase tracking-widest block mb-4">AI Research Co-Pilot Prompt</strong>
+                <div class="font-mono text-sm text-green-400 space-y-2">
+                    <p>"Act as a Cold Email Specialist. My Service: [Insert Service]. Prospect Context: [Paste Profile].</p>
+                    <p><strong>Your Task:</strong></p>
+                    <p>1. <strong>Analyze Pain:</strong> What is their likely business pain?</p>
+                    <p>2. <strong>Generate Hooks:</strong> Write two 15-word recognition hooks (Fact-Based & Problem-Anticipation)."</p>
+                </div>
+            </div>
+
+            <!-- FINAL CONCLUSION -->
+            <div class="text-center py-10">
+                <p class="text-gray-400 italic mb-6">"You are now equipped. You have the Mindset, Method, Machine, and Mastery. Welcome to the Hunt."</p>
+                <div class="inline-block p-[2px] rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500">
+                    <a href="/quiz" class="block bg-black text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-gray-900 transition hover:scale-105">
+                        Start Certification Exam
+                    </a>
+                </div>
             </div>
         """
     }

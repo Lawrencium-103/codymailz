@@ -6,13 +6,15 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 # --- IMPORTS ---
+# Ensure these files exist in your folder
 from ai_engine import run_agent
 from course_data import COURSE_MODULES
 from quiz_data import QUIZ_BANK
-import stats  # Import the new stats file
+import stats 
 
 app = FastAPI()
 
+# Crash protection for static files
 if not os.path.exists("static"):
     os.makedirs("static")
 
@@ -27,17 +29,12 @@ templates = Jinja2Templates(directory="templates")
 async def read_home(request: Request):
     current_stats = stats.get_stats()
     return templates.TemplateResponse("index.html", {
-        "request": request,
-        "stats": current_stats
+        "request": request, "stats": current_stats
     })
 
 @app.get("/about", response_class=HTMLResponse)
 async def read_about(request: Request):
     return templates.TemplateResponse("about.html", {"request": request})
-
-# ==========================
-#       COURSE ROUTES
-# ==========================
 
 @app.get("/course", response_class=HTMLResponse)
 async def read_course_index(request: Request):
@@ -59,10 +56,6 @@ async def read_module(request: Request, module_id: int):
         "request": request, "module": module, "prev_id": prev_id, "next_id": next_id, "progress": progress
     })
 
-# ==========================
-#       QUIZ ROUTE
-# ==========================
-
 @app.get("/quiz", response_class=HTMLResponse)
 async def read_quiz(request: Request):
     num_questions = min(15, len(QUIZ_BANK))
@@ -79,22 +72,28 @@ async def read_quiz(request: Request):
 async def read_tool(request: Request):
     return templates.TemplateResponse("tool.html", {"request": request})
 
+# --- THIS IS THE CRITICAL ROUTE ---
 @app.post("/generate")
 async def generate_email(
     request: Request, 
     target: str = Form(...), 
     service: str = Form(...), 
     source: str = Form(...),
-    length: str = Form("Short & Punchy (Sniper)") 
+    length: str = Form("Short (Sniper)"), 
+    # Checkboxes return a list. If empty, default to 'Direct Value'
+    styles: list[str] = Form(["Direct Value"]),
+    # The Slider returns a float
+    creativity: float = Form(0.7)
 ):
-    # 1. Increment Usage (Safe Mode)
-    try:
-        stats.increment_usage()
-    except:
-        pass # Don't crash if stats fail
+    # 1. Update Stats
+    try: stats.increment_usage()
+    except: pass
 
-    # 2. Run AI
-    result_data = run_agent(target, service, source, length)
+    # 2. Process Styles
+    style_string = ", ".join(styles)
+    
+    # 3. Run Agent
+    result_data = run_agent(target, service, source, length, style_string, creativity)
     
     return templates.TemplateResponse("tool.html", {
         "request": request, 
@@ -102,7 +101,9 @@ async def generate_email(
         "target": target, 
         "service": service, 
         "source": source, 
-        "length": length
+        "length": length,
+        "selected_styles": styles,
+        "creativity": creativity
     })
 
 @app.post("/like")

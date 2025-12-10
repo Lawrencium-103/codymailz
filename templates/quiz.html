@@ -5,46 +5,44 @@
     
     <!-- HEADER -->
     <div class="text-center mb-8" data-aos="fade-down">
-        <h1 class="text-3xl md:text-5xl font-serif text-white">Codymailz<span class="text-gold">.Certification</span></h1>
-        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mt-2">Final Examination</p>
+        <h1 class="text-3xl md:text-5xl font-serif text-white">The Hunter's<span class="text-gold"> Assessment</span></h1>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mt-2">Test Your Instincts</p>
     </div>
 
     <!-- CARDS CONTAINER -->
     <div class="max-w-3xl mx-auto relative">
         
-        <!-- STATE 1: INTRO (Start Screen) -->
+        <!-- STATE 1: INTRO -->
         <div id="intro-card" class="glass-panel p-10 rounded-2xl text-center border-t-4 border-gold">
-            <h2 class="text-2xl text-white font-serif mb-4">Are you ready to be certified?</h2>
+            <h2 class="text-2xl text-white font-serif mb-4">Ready to test your knowledge?</h2>
             <p class="text-gray-400 mb-8 leading-relaxed">
-                You will face <strong>15 randomized questions</strong> from our bank of 38 expert scenarios.
-                Your speed and accuracy will determine your final "Hunter Score".
+                This isn't a pass/fail exam. It's a mirror. <br>
+                Let's see if you've internalized the <strong>Engineer's Mindset</strong> required to dominate the inbox.
             </p>
             <div class="grid grid-cols-3 gap-4 mb-8 text-sm">
                 <div class="bg-gray-800 p-3 rounded border border-gray-700">
                     <span class="text-gold block font-bold text-lg">15</span>
-                    <span class="text-gray-500 text-xs uppercase">Questions</span>
+                    <span class="text-gray-500 text-xs uppercase">Scenarios</span>
                 </div>
                 <div class="bg-gray-800 p-3 rounded border border-gray-700">
-                    <span class="text-gold block font-bold text-lg">45s</span>
-                    <span class="text-gray-500 text-xs uppercase">Avg Time</span>
+                    <span class="text-gold block font-bold text-lg">Fast</span>
+                    <span class="text-gray-500 text-xs uppercase">Paced</span>
                 </div>
                 <div class="bg-gray-800 p-3 rounded border border-gray-700">
-                    <span class="text-gold block font-bold text-lg">80%</span>
-                    <span class="text-gray-500 text-xs uppercase">Pass Mark</span>
+                    <span class="text-gold block font-bold text-lg">100%</span>
+                    <span class="text-gray-500 text-xs uppercase">Private</span>
                 </div>
             </div>
             <button onclick="startQuiz()" class="bg-gold text-black px-10 py-4 rounded font-bold uppercase tracking-widest hover:bg-white hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                Start Exam
+                Begin Assessment
             </button>
         </div>
 
         <!-- STATE 2: THE QUIZ (Hidden by default) -->
         <div id="quiz-card" class="hidden glass-panel p-8 rounded-2xl border border-gray-800 relative">
-            
-            <!-- Top Bar -->
             <div class="flex justify-between items-center mb-6 border-b border-gray-800 pb-4">
                 <div class="text-xs uppercase tracking-widest text-gray-500">
-                    Question <span id="q-current" class="text-white">1</span> / <span id="q-total">15</span>
+                    Scenario <span id="q-current" class="text-white">1</span> / <span id="q-total">15</span>
                 </div>
                 <div class="flex items-center gap-2 text-gold font-mono">
                     <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
@@ -52,17 +50,14 @@
                 </div>
             </div>
 
-            <!-- Question Area -->
             <h3 id="question-text" class="text-xl md:text-2xl text-white font-light mb-8 leading-relaxed min-h-[80px]">
                 Loading...
             </h3>
 
-            <!-- Options -->
             <div id="options-container" class="space-y-3">
                 <!-- Options injected via JS -->
             </div>
 
-            <!-- Progress Bar -->
             <div class="w-full bg-gray-800 h-1 mt-8 rounded-full overflow-hidden">
                 <div id="progress-bar" class="bg-gold h-full transition-all duration-300" style="width: 0%"></div>
             </div>
@@ -71,71 +66,64 @@
         <!-- STATE 3: RESULTS (Hidden by default) -->
         <div id="result-card" class="hidden glass-panel p-10 rounded-2xl text-center border-t-4 border-cyan-500">
             
-            <h2 class="text-2xl text-white font-serif mb-6">Assessment Complete</h2>
+            <h2 class="text-2xl text-white font-serif mb-2">Assessment Complete</h2>
+            <p class="text-gray-500 text-xs uppercase tracking-widest mb-8">Your Strategic Profile</p>
 
-            <!-- SEMI-CIRCLE GAUGE CONTAINER -->
-            <!-- 2:1 Aspect Ratio (Width 300px, Height 150px) -->
+            <!-- GAUGE -->
             <div class="relative w-[300px] h-[150px] mx-auto mb-4 overflow-hidden">
-                
-                <!-- 1. The Gradient Arc (Full Circle masked) -->
-                <!-- We rotate it so the colors start at 270deg (Left) and sweep to 90deg (Right) -->
                 <div class="w-[300px] h-[300px] rounded-full"
                      style="background: conic-gradient(from 270deg, #ef4444 0deg, #eab308 90deg, #22c55e 180deg, transparent 180deg);
                             mask-image: radial-gradient(transparent 60%, black 61%);
                             -webkit-mask-image: radial-gradient(transparent 60%, black 61%);">
                 </div>
-
-                <!-- 2. The Needle -->
-                <!-- Origin is bottom center of the half-circle container -->
                 <div id="gauge-needle" 
                      class="absolute bottom-0 left-1/2 w-1 h-full bg-white origin-bottom transition-transform duration-1000 ease-out z-10"
                      style="transform: rotate(-90deg);">
                 </div>
-
-                <!-- 3. Needle Base (Pivot Point) -->
                 <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-white rounded-full z-20 shadow-lg"></div>
-
             </div>
 
-            <!-- Score Text Display -->
-            <div class="mb-10 relative -top-4">
+            <!-- Score -->
+            <div class="mb-8 relative -top-4">
                 <span id="final-score" class="text-5xl font-bold text-white block">0%</span>
-                <span id="score-label" class="text-xs uppercase text-gray-500 tracking-widest">Hunter Score</span>
+                <span id="score-label" class="text-xs uppercase text-gray-500 tracking-widest">Knowledge Score</span>
             </div>
 
-            <!-- Metrics Grid -->
-            <div class="grid grid-cols-2 gap-4 mb-8">
-                <div class="bg-black/40 p-4 rounded border border-gray-700">
-                    <span class="text-cyan-400 text-xs uppercase tracking-widest block mb-1">Time Taken</span>
-                    <span id="final-time" class="text-xl text-white font-mono">0m 0s</span>
-                </div>
-                <div class="bg-black/40 p-4 rounded border border-gray-700">
-                    <span class="text-gold text-xs uppercase tracking-widest block mb-1">Avg Speed</span>
-                    <span id="final-speed" class="text-xl text-white font-mono">0s / q</span>
-                </div>
+            <!-- VERDICT (The Ego Massage) -->
+            <div class="bg-black/30 p-6 rounded border border-gray-700 mb-8">
+                <h3 id="verdict-title" class="text-xl text-gold font-serif mb-2">Analyzing...</h3>
+                <p id="verdict-text" class="text-gray-300 text-sm leading-relaxed">Calculating...</p>
             </div>
 
-            <!-- Verdict Text -->
-            <p id="verdict-text" class="text-gray-300 mb-8 italic text-lg">Analyzing...</p>
-
+            <!-- ACTION BUTTONS -->
             <div class="flex flex-col gap-4">
-                <a href="/tool" class="bg-gold text-black px-8 py-3 rounded font-bold uppercase tracking-widest hover:bg-white transition">
-                    Use Codymailz Agent
+                <a href="/tool" class="bg-white text-black px-8 py-3 rounded font-bold uppercase tracking-widest hover:bg-gold transition shadow-lg">
+                    Execute (Launch AI Tool)
                 </a>
-                <button onclick="location.reload()" class="text-gray-500 text-xs uppercase tracking-widest hover:text-white">
-                    Retake Exam
-                </button>
+                
+                <!-- UNLIMITED LIKE BUTTON -->
+                <div class="mt-6 border-t border-gray-800 pt-6">
+                    <p class="text-gray-500 text-xs mb-3 uppercase tracking-widest">Did you find value? Support the project.</p>
+                    <button id="likeBtn" onclick="spamLike()" class="group relative inline-flex items-center gap-3 bg-gray-900 border border-gray-700 text-gray-300 px-8 py-4 rounded-full hover:border-green-500 hover:text-green-400 transition-all active:scale-95 select-none">
+                        <span class="text-2xl group-hover:-translate-y-1 transition-transform duration-200">👍</span>
+                        <div class="text-left">
+                            <span class="block text-xs font-bold uppercase tracking-widest">Smash the Like</span>
+                            <span id="like-counter-display" class="block text-[10px] text-gray-500 group-hover:text-green-500">Tap multiple times!</span>
+                        </div>
+                        
+                        <!-- Floating +1 Animation Container -->
+                        <div id="click-effects" class="absolute top-0 left-0 w-full h-full pointer-events-none"></div>
+                    </button>
+                </div>
             </div>
         </div>
 
     </div>
 </div>
 
-<!-- DATA INJECTION & LOGIC -->
 <script>
     const questions = {{ questions | tojson }}; 
     const totalQs = questions.length;
-    
     let currentIdx = 0;
     let score = 0;
     let startTime;
@@ -164,13 +152,10 @@
             endQuiz();
             return;
         }
-
         const q = questions[currentIdx];
-        
         document.getElementById('q-current').innerText = currentIdx + 1;
         document.getElementById('q-total').innerText = totalQs;
         document.getElementById('question-text').innerText = q.q;
-        
         const pct = ((currentIdx) / totalQs) * 100;
         document.getElementById('progress-bar').style.width = `${pct}%`;
 
@@ -180,68 +165,97 @@
         q.options.forEach((opt, idx) => {
             const btn = document.createElement('button');
             btn.className = "w-full text-left p-4 rounded border border-gray-700 bg-black/20 text-gray-300 hover:border-gold hover:text-white hover:bg-gray-800 transition duration-200 flex items-center group";
-            
-            btn.innerHTML = `
-                <span class="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center mr-4 text-xs group-hover:border-gold group-hover:text-gold text-gray-500 transition">${String.fromCharCode(65+idx)}</span>
-                <span>${opt}</span>
-            `;
-            
+            btn.innerHTML = `<span class="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center mr-4 text-xs group-hover:border-gold group-hover:text-gold text-gray-500 transition">${String.fromCharCode(65+idx)}</span><span>${opt}</span>`;
             btn.onclick = () => handleAnswer(idx, q.answer);
             container.appendChild(btn);
         });
     }
 
     function handleAnswer(selected, correct) {
-        if (selected === correct) {
-            score++;
-        }
+        if (selected === correct) score++;
         currentIdx++;
         loadQuestion();
     }
 
     function endQuiz() {
         clearInterval(timerInterval);
-        const endTime = new Date();
-        const durationSecs = Math.floor((endTime - startTime) / 1000);
-        
         const finalPercentage = Math.round((score / totalQs) * 100);
-        const avgSpeed = Math.round(durationSecs / totalQs);
         
-        // --- UI TRANSITION ---
         document.getElementById('quiz-card').classList.add('hidden');
         document.getElementById('result-card').classList.remove('hidden');
-
-        // Populate Numbers
         document.getElementById('final-score').innerText = `${finalPercentage}%`;
-        document.getElementById('final-time').innerText = `${Math.floor(durationSecs/60)}m ${durationSecs%60}s`;
-        document.getElementById('final-speed').innerText = `${avgSpeed}s / q`;
 
-        // --- GAUGE ANIMATION LOGIC ---
-        // Semi-circle mapping:
-        // 0% Score = -90deg (Left/Red)
-        // 50% Score = 0deg (Up/Yellow)
-        // 100% Score = 90deg (Right/Green)
-        // Formula: (Score * 1.8) - 90
-        
+        // Gauge Animation
         const needleRotation = (finalPercentage * 1.8) - 90;
-        
-        // Small delay to let the UI render before animating
         setTimeout(() => {
             document.getElementById('gauge-needle').style.transform = `rotate(${needleRotation}deg)`;
         }, 100);
 
-        // --- VERDICT LOGIC ---
-        const verdict = document.getElementById('verdict-text');
-        if (finalPercentage >= 80) {
-            verdict.innerText = "Exceptional. You are a Certified Hunter.";
-            verdict.className = "text-xl mb-8 italic text-green-400 font-serif";
-        } else if (finalPercentage >= 50) {
-            verdict.innerText = "Good, but you need to sharpen your skills.";
-            verdict.className = "text-xl mb-8 italic text-yellow-400 font-serif";
+        // Ego Massage Copy
+        const vTitle = document.getElementById('verdict-title');
+        const vText = document.getElementById('verdict-text');
+
+        if (finalPercentage >= 85) {
+            vTitle.innerText = "The Natural Hunter";
+            vTitle.className = "text-xl text-green-400 font-serif mb-2";
+            vText.innerText = "Exceptional. You intuitively understand the psychology of the inbox. You don't need luck; you have logic. Go execute.";
+        } else if (finalPercentage >= 60) {
+            vTitle.innerText = "The Architect in Training";
+            vTitle.className = "text-xl text-gold font-serif mb-2";
+            vText.innerText = "You have the raw materials. You understand the core concepts, but there's room to sharpen your blade. Review the 'Selfish Offer' again, and you'll be dangerous.";
         } else {
-            verdict.innerText = "Failed. Review the Mindset Module again.";
-            verdict.className = "text-xl mb-8 italic text-red-400 font-serif";
+            vTitle.innerText = "The Student Mindset";
+            vTitle.className = "text-xl text-cyan-400 font-serif mb-2";
+            vText.innerText = "This is good. It means you are challenging your old assumptions. The 'Begging' mindset is hard to break, but you are here doing the work. That is the only metric that matters.";
         }
     }
+
+    // --- UNLIMITED LIKE LOGIC ---
+    function spamLike() {
+        const btn = document.getElementById('likeBtn');
+        const container = document.getElementById('click-effects');
+        const display = document.getElementById('like-counter-display');
+
+        // 1. Send Request
+        fetch('/like', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+            display.innerText = `Global Support: ${data.likes}`;
+            display.classList.add('text-green-400');
+        });
+
+        // 2. Visual Animation (Button Pulse)
+        btn.classList.add('border-green-500', 'bg-green-900/20');
+        setTimeout(() => {
+            btn.classList.remove('border-green-500', 'bg-green-900/20');
+        }, 200);
+
+        // 3. Floating +1 Effect
+        const plusOne = document.createElement('div');
+        plusOne.innerText = "+1";
+        plusOne.className = "absolute text-green-400 font-bold text-xl animate-float-up pointer-events-none";
+        
+        // Random position near center
+        const x = 50 + (Math.random() * 40 - 20); 
+        const y = 50;
+        
+        plusOne.style.left = `${x}%`;
+        plusOne.style.top = `${y}%`;
+        
+        container.appendChild(plusOne);
+
+        // Cleanup DOM
+        setTimeout(() => { plusOne.remove(); }, 800);
+    }
 </script>
+
+<style>
+    @keyframes floatUp {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-30px) scale(1.5); opacity: 0; }
+    }
+    .animate-float-up {
+        animation: floatUp 0.8s ease-out forwards;
+    }
+</style>
 {% endblock %}
